@@ -129,7 +129,7 @@ import { mapState } from 'vuex'
 import { PageHeaderWrapper } from '@ant-design-vue/pro-layout'
 import { Radar } from '@/components'
 
-import { getRoleList, getServiceList } from '@/api/manage'
+import { getAllRoles, getServiceList } from '@/api/IdentityAPI'
 
 const DataSet = require('@antv/data-set')
 
@@ -209,8 +209,8 @@ export default {
     this.user = this.userInfo
     this.avatar = this.userInfo.avatar
 
-    getRoleList().then(res => {
-      // console.log('workplace -> call getRoleList()', res)
+    getAllRoles().then(res => {
+      console.log('workplace -> call getAllRoles()', res)
     })
 
     getServiceList().then(res => {

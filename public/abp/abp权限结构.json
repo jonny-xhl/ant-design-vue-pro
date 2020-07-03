@@ -1,0 +1,614 @@
+{
+  "entityDisplayName": "admin",
+  "groups": [
+    {
+      "name": "AbpIdentity",
+      "displayName": "身份标识管理",
+      "permissions": [
+        {
+          "name": "AbpIdentity.Roles",
+          "displayName": "角色管理",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Roles.Create",
+          "displayName": "创建",
+          "parentName": "AbpIdentity.Roles",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Roles.Update",
+          "displayName": "编辑",
+          "parentName": "AbpIdentity.Roles",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Roles.Delete",
+          "displayName": "删除",
+          "parentName": "AbpIdentity.Roles",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Roles.ManagePermissions",
+          "displayName": "更改权限",
+          "parentName": "AbpIdentity.Roles",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Users",
+          "displayName": "用户管理",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Users.Create",
+          "displayName": "创建",
+          "parentName": "AbpIdentity.Users",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Users.Update",
+          "displayName": "编辑",
+          "parentName": "AbpIdentity.Users",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Users.Delete",
+          "displayName": "删除",
+          "parentName": "AbpIdentity.Users",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpIdentity.Users.ManagePermissions",
+          "displayName": "更改权限",
+          "parentName": "AbpIdentity.Users",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AbpTenantManagement",
+      "displayName": "租户管理",
+      "permissions": [
+        {
+          "name": "AbpTenantManagement.Tenants",
+          "displayName": "租户管理",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpTenantManagement.Tenants.Create",
+          "displayName": "创建",
+          "parentName": "AbpTenantManagement.Tenants",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpTenantManagement.Tenants.Update",
+          "displayName": "编辑",
+          "parentName": "AbpTenantManagement.Tenants",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpTenantManagement.Tenants.Delete",
+          "displayName": "删除",
+          "parentName": "AbpTenantManagement.Tenants",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpTenantManagement.Tenants.ManageFeatures",
+          "displayName": "管理功能",
+          "parentName": "AbpTenantManagement.Tenants",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "AbpTenantManagement.Tenants.ManageConnectionStrings",
+          "displayName": "管理连接字符串",
+          "parentName": "AbpTenantManagement.Tenants",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Call",
+      "displayName": "分诊叫号",
+      "permissions": [
+        {
+          "name": "Call.Management.Swagger",
+          "displayName": "API文档",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.Terminal",
+          "displayName": "终端",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.Terminal.Update",
+          "displayName": "编辑",
+          "parentName": "Call.Management.Terminal",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.Terminal.Delete",
+          "displayName": "删除",
+          "parentName": "Call.Management.Terminal",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.Terminal.Create",
+          "displayName": "创建",
+          "parentName": "Call.Management.Terminal",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement",
+          "displayName": "字典管理",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.Doctor",
+          "displayName": "医生",
+          "parentName": "Call.Management.DictionariesManagement",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.Doctor.Update",
+          "displayName": "编辑",
+          "parentName": "Call.Management.DictionariesManagement.Doctor",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.Doctor.Delete",
+          "displayName": "删除",
+          "parentName": "Call.Management.DictionariesManagement.Doctor",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.Doctor.Create",
+          "displayName": "创建",
+          "parentName": "Call.Management.DictionariesManagement.Doctor",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.ConsultingRoom",
+          "displayName": "检查室",
+          "parentName": "Call.Management.DictionariesManagement",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.ConsultingRoom.Update",
+          "displayName": "编辑",
+          "parentName": "Call.Management.DictionariesManagement.ConsultingRoom",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.ConsultingRoom.Delete",
+          "displayName": "删除",
+          "parentName": "Call.Management.DictionariesManagement.ConsultingRoom",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.ConsultingRoom.Create",
+          "displayName": "创建",
+          "parentName": "Call.Management.DictionariesManagement.ConsultingRoom",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.SettingDoctor",
+          "displayName": "医生排班",
+          "parentName": "Call.Management.DictionariesManagement.ConsultingRoom",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.Departments",
+          "displayName": "科室",
+          "parentName": "Call.Management.DictionariesManagement",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.Departments.Update",
+          "displayName": "编辑",
+          "parentName": "Call.Management.DictionariesManagement.Departments",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.Departments.Delete",
+          "displayName": "删除",
+          "parentName": "Call.Management.DictionariesManagement.Departments",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.DictionariesManagement.Departments.Create",
+          "displayName": "创建",
+          "parentName": "Call.Management.DictionariesManagement.Departments",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.Registers",
+          "displayName": "挂号",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.QueueInfo",
+          "displayName": "排班",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.QueueInfo.Update",
+          "displayName": "编辑",
+          "parentName": "Call.Management.QueueInfo",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.QueueInfo.Delete",
+          "displayName": "删除",
+          "parentName": "Call.Management.QueueInfo",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.QueueInfo.Create",
+          "displayName": "创建",
+          "parentName": "Call.Management.QueueInfo",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.QueueItem",
+          "displayName": "队列详情",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.QueueItem.Update",
+          "displayName": "编辑",
+          "parentName": "Call.Management.QueueItem",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.QueueItem.Delete",
+          "displayName": "删除",
+          "parentName": "Call.Management.QueueItem",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        },
+        {
+          "name": "Call.Management.QueueItem.Create",
+          "displayName": "创建",
+          "parentName": "Call.Management.QueueItem",
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SettingUi",
+      "displayName": "设置UI",
+      "permissions": [
+        {
+          "name": "SettingUi.Global",
+          "displayName": "全局",
+          "parentName": null,
+          "isGranted": true,
+          "allowedProviders": [],
+          "grantedProviders": [
+            {
+              "providerName": "R",
+              "providerKey": "admin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

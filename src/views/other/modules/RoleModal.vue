@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { getPermissions } from '@/api/manage'
+import { getPermissions } from '@/api/IdentityAPI'
 import { actionToObject } from '@/utils/permissions'
 import pick from 'lodash.pick'
 

@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import { getSmsCaptcha } from '@/api/login'
+import { getSmsCaptcha } from '@/api/AccountAPI'
 
 const levelNames = {
   0: '低',

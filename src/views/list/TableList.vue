@@ -121,7 +121,7 @@
 <script>
 import moment from 'moment'
 import { STable, Ellipsis } from '@/components'
-import { getRoleList, getServiceList } from '@/api/manage'
+import { getAllRoles, getServiceList } from '@/api/IdentityAPI'
 
 import StepByStepModal from './modules/StepByStepModal'
 import CreateForm from './modules/CreateForm'
@@ -225,7 +225,7 @@ export default {
     }
   },
   created () {
-    getRoleList({ t: new Date() })
+    getAllRoles({ t: new Date() })
   },
   computed: {
     rowSelection () {

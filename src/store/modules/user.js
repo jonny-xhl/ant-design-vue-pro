@@ -1,5 +1,7 @@
 import storage from 'store'
-import { login, getInfo, logout } from '@/api/login'
+import { login, getInfo, logout } from '@/api/AccountAPI'
+import { getApplicationConfiguration } from '@/api/ApplicationConfigurationAPI'
+import { getPermissions } from '@/api/PermissionsAPI'
 import { ACCESS_TOKEN } from '@/store/mutation-types'
 import { welcome } from '@/utils/util'
 
@@ -37,9 +39,9 @@ const user = {
     Login ({ commit }, userInfo) {
       return new Promise((resolve, reject) => {
         login(userInfo).then(response => {
-          const result = response.result
-          storage.set(ACCESS_TOKEN, result.token, 7 * 24 * 60 * 60 * 1000)
-          commit('SET_TOKEN', result.token)
+          const result = response
+          storage.set(ACCESS_TOKEN, result.access_token, result.expires_in)
+          commit('SET_TOKEN', result.access_token)
           resolve()
         }).catch(error => {
           reject(error)
@@ -51,30 +53,64 @@ const user = {
     GetInfo ({ commit }) {
       return new Promise((resolve, reject) => {
         getInfo().then(response => {
-          const result = response.result
-
-          if (result.role && result.role.permissions.length > 0) {
-            const role = result.role
-            role.permissions = result.role.permissions
-            role.permissions.map(per => {
-              if (per.actionEntitySet != null && per.actionEntitySet.length > 0) {
-                const action = per.actionEntitySet.map(action => { return action.action })
-                per.actionList = action
-              }
-            })
-            role.permissionList = role.permissions.map(permission => { return permission.permissionId })
-            commit('SET_ROLES', result.role)
-            commit('SET_INFO', result)
-          } else {
-            reject(new Error('getInfo: roles must be a non-null array !'))
-          }
-
+          /**
+           * 返回结构
+           * {
+                "sub": "09dac464-c573-1e7d-43ae-39f4843d1bda",
+                "name": "admin",
+                "role": "admin"
+             }
+          */
+          const result = response
           commit('SET_NAME', { name: result.name, welcome: welcome() })
-          commit('SET_AVATAR', result.avatar)
-
           resolve(response)
         }).catch(error => {
           reject(error)
+        })
+      })
+    },
+    getPermissions ({ commit }, user) {
+      return new Promise((resolve, reject) => {
+        var params = {}
+        params.providerName = 'U'
+        params.providerKey = user.sub
+        // 后期考虑多个role的情况
+        getPermissions(params).then(response => {
+          resolve(response)
+          // const data = {}
+          // data.role = {
+          //   id: user.role,
+          //   name: user.role
+          // }
+          // response.groups.forEach(item => {
+          //   item.permissions.forEach(permission => {
+          //     data.role.permissions.push({
+          //       roleId: user.role,
+          //       permissionId: permission.name,
+          //       permissionName: permission.displayName,
+          //       actionEntitySet: [
+
+          //       ]
+          //     })
+          //   })
+          // })
+        })
+      })
+    },
+    getPermissionsByConfiguration ({ commit }) {
+      return new Promise((resolve, reject) => {
+        const data = {}
+        data.roles = []
+         getApplicationConfiguration().then(response => {
+          const { auth: { grantedPolicies } } = response
+          for (var role in grantedPolicies) {
+            data.roles.push(role)
+          }
+          // if (!data.roles || data.roles.length <= 0) {
+          //   reject(new Error('getInfo: roles must be a non-null array!'))
+          // }
+          commit('SET_ROLES', data.roles)
+          resolve(data)
         })
       })
     },

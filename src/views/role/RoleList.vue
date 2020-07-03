@@ -64,7 +64,7 @@
 
 <script>
 import pick from 'lodash.pick'
-import { getRoleList, getPermissions } from '@/api/manage'
+import { getAllRoles, getPermissions } from '@/api/IdentityAPI'
 import { actionToObject } from '@/utils/permissions'
 import { baseMixin } from '@/store/app-mixin'
 
@@ -82,7 +82,7 @@ export default {
     }
   },
   created () {
-    getRoleList().then((res) => {
+    getAllRoles().then((res) => {
       this.roles = res.result.data
       this.roles.push({
         id: '-1',
